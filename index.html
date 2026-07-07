@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I'm Sorry</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Floating hearts live behind everything -->
+<div id="hearts-layer"></div>
+
+<!-- ENVELOPE / HERO -->
+<section id="envelope-screen">
+  <div class="envelope-wrap">
+    <div class="envelope" id="envelope">
+      <div class="flap"></div>
+      <div class="pocket"></div>
+      <div class="seal" id="seal">
+        <svg viewBox="0 0 40 40" width="28" height="28">
+          <path d="M20 33s-13-8.1-13-17.3C7 10.2 11 7 15 7c2.6 0 4.3 1.4 5 2.7C20.7 8.4 22.4 7 25 7c4 0 8 3.2 8 8.7C33 24.9 20 33 20 33z" fill="currentColor"/>
+        </svg>
+      </div>
+    </div>
+    <p class="tap-hint">tap the envelope</p>
+  </div>
+</section>
+
+<!-- MAIN LETTER (hidden until envelope opens) -->
+<main id="letter" hidden>
+
+  <section class="page greeting-page">
+    <p class="eyebrow">for you,</p>
+    <h1 class="friend-name" id="friend-name-el">Friend</h1>
+    <p class="body-text">Please don't close this tab yet.<br>I made something for you.</p>
+    <button class="btn btn-ghost" id="continue-btn">keep reading ↓</button>
+  </section>
+
+  <section class="page apology-page">
+    <p class="eyebrow">02 &mdash; what I actually wanted to say</p>
+    <h2 class="apology-heading">I'm sorry.</h2>
+    <p class="typewriter" id="typewriter"></p>
+  </section>
+
+  <section class="page question-page">
+    <p class="eyebrow">03 &mdash; last thing, I promise</p>
+    <h2 class="section-title">Can we start again?</h2>
+    <div class="choice-row">
+      <button class="btn btn-yes" id="yes-btn">yes</button>
+      <button class="btn btn-wait" id="wait-btn">I need some time</button>
+    </div>
+    <div class="reply" id="reply"></div>
+  </section>
+
+</main>
+
+<audio id="bg-music" loop preload="none">
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+<button id="music-toggle" aria-label="toggle music">♪</button>
+
+<script src="script.js"></script>
+</body>
+</html>
